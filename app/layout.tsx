@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 import Navbar from "@/components/navbar";
@@ -31,11 +32,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SpeedInsights />
         <Navbar />
-        <div className="flex flex-col">
-          {children}
-          <Footer />
-        </div>
+        <div className="flex flex-col">{children}</div>
+        <Footer />
       </body>
     </html>
   );
