@@ -64,7 +64,11 @@ export default function LandingPage() {
             <Card>
               <CardContent className="flex flex-col items-center space-y-2 p-6">
                 <BarChartIcon className="h-12 w-12 mb-2" />
-                <h3 className="text-xl font-bold">Always up-to-date</h3>
+                <h3 className="text-xl font-bold text-center">
+                  Always
+                  <br />
+                  up-to-date
+                </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
                   Always have the latest courses so you can plan accordingly.
                 </p>
