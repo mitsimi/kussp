@@ -78,7 +78,7 @@ export default function LandingPage() {
       <section className="w-full py-12 md:py-24 lg:py-32 grid justify-center dark:bg-zinc-800">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">
-            What Our Customers Say
+            What Students Say
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[1, 2, 3].map((i) => (
@@ -90,12 +90,12 @@ export default function LandingPage() {
                     width="80"
                   />
                   <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                    "This product has completely transformed our workflow.
-                    Highly recommended!"
+                    &quot;This product has completely changed my life. Highly
+                    recommended!&quot;
                   </p>
                   <p className="font-semibold">Jane Doe</p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    CEO, Tech Corp
+                    CEO, HTMX
                   </p>
                 </CardContent>
               </Card>
@@ -113,9 +113,9 @@ export default function LandingPage() {
                 Ready to Get Started?
               </h2>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                We've helped thousands of students like you to get on top of
-                their schedules! Join the ranks and discover how this tool can
-                speed up your schedule planning!
+                We&apos;ve helped thousands of students like you to get on top
+                of their schedules! Join the ranks and discover how this tool
+                can speed up your schedule planning!
               </p>
             </div>
             <div className="w-full max-w-sm space-y-2">
