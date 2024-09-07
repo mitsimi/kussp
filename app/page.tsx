@@ -61,7 +61,7 @@ export default function LandingPage() {
                 </p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="sm:[&:last-child]:col-span-full md:[&:last-child]:col-span-1">
               <CardContent className="flex flex-col items-center space-y-2 p-6">
                 <BarChartIcon className="h-12 w-12 mb-2" />
                 <h3 className="text-xl font-bold text-center">

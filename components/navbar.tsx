@@ -42,7 +42,7 @@ export default function Navbar() {
           className={cn(
             "py-4 px-8",
             "md:mx-14 md:my-4",
-            "xl:max-w-screen-lg xl:mx-auto",
+            "xl:max-w-screen-md xl:mx-auto",
             "bg-white dark:bg-neutral-800/80 border-slate-900/10",
             "md:border-0 border-y",
             "md:shadow-xl md:rounded-[14px]"
