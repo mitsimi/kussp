@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { CardContent, Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 import { JSX, SVGProps } from "react";
 
@@ -40,8 +41,14 @@ export default function LandingPage() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">
             Key Features
           </h2>
-          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 text-balance sm:*:[&:last-child]:col-span-full md:*:[&:last-child]:col-span-1">
-            <Card className="">
+          <div
+            className={cn(
+              "grid gap-10 sm:grid-cols-2 md:grid-cols-3",
+              "sm:*:[&:last-child]:col-span-full md:*:[&:last-child]:col-span-1",
+              "*:shadow-neo"
+            )}
+          >
+            <Card>
               <CardContent className="flex flex-col items-center space-y-2 p-6">
                 <LayoutIcon className="h-12 w-12 mb-2" />
                 <h3 className="text-xl font-bold">Intuitive Design</h3>
