@@ -40,8 +40,8 @@ export default function LandingPage() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">
             Key Features
           </h2>
-          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 text-balance">
-            <Card>
+          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 text-balance sm:*:[&:last-child]:col-span-full md:*:[&:last-child]:col-span-1">
+            <Card className="">
               <CardContent className="flex flex-col items-center space-y-2 p-6">
                 <LayoutIcon className="h-12 w-12 mb-2" />
                 <h3 className="text-xl font-bold">Intuitive Design</h3>
@@ -61,7 +61,7 @@ export default function LandingPage() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="sm:[&:last-child]:col-span-full md:[&:last-child]:col-span-1">
+            <Card>
               <CardContent className="flex flex-col items-center space-y-2 p-6">
                 <BarChartIcon className="h-12 w-12 mb-2" />
                 <h3 className="text-xl font-bold text-center">
@@ -84,7 +84,7 @@ export default function LandingPage() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">
             What Students Say
           </h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 md:*:[&:last-child]:col-span-1">
             {[1, 2, 3].map((i) => (
               <Card key={i}>
                 <CardContent className="flex flex-col items-center space-y-2 p-6">
