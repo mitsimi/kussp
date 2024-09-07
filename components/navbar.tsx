@@ -43,9 +43,9 @@ export default function Navbar() {
             "py-4 px-8",
             "md:mx-14 md:my-4",
             "xl:max-w-screen-md xl:mx-auto",
-            "bg-white dark:bg-neutral-800/80 border-slate-900/10",
-            "md:border-0 border-y",
-            "md:shadow-xl md:rounded-[14px]"
+            "bg-neutral-50 dark:bg-neutral-800/80",
+            "border-y border-slate-900/10 md:border-0 md:rounded-[14px]",
+            "md:shadow-neo"
           )}
         >
           <div className="flex items-center justify-between">
