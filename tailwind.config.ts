@@ -55,6 +55,11 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        neo: "8px 8px 8px rgb(0, 0, 0, 0.1), -8px -8px 8px rgb(255, 255, 255, 1)",
+        cutout:
+          "8px 8px 8px rgb(0, 0, 0, 0.1) inset, -8px -8px 8px rgb(255, 255, 255, 1) inset",
+      },
       animation: {
         "gradient-x": "gradient-x 10s ease infinite",
         "gradient-y": "gradient-y 10s ease infinite",
