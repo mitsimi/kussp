@@ -40,7 +40,9 @@ export default function Navbar() {
       <Disclosure as="div" className="z-50 fixed top-0 right-0 left-0">
         <div
           className={cn(
-            "md:container md:mx-auto md:my-4 py-4 px-8",
+            "py-4 px-8",
+            "md:mx-14 md:my-4",
+            "xl:max-w-screen-lg xl:mx-auto",
             "bg-white dark:bg-neutral-800/80 border-slate-900/10",
             "md:border-0 border-y",
             "md:shadow-xl md:rounded-[14px]"
