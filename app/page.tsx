@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { CardContent, Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 import { JSX, SVGProps } from "react";
 
@@ -17,7 +18,7 @@ export default function LandingPage() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-balance">
                 A new way of
                 <br />
-                <span className="bg-clip-text text-transparent animate-gradient-x bg-gradient-to-r from-green-500 via-red-600 to-blue-400">
+                <span className="bg-clip-text text-transparent bg-primary">
                   planning
                 </span>{" "}
                 your semester
@@ -28,53 +29,97 @@ export default function LandingPage() {
               </p>
             </div>
             <div className="space-x-4">
-              <Button>Get Started</Button>
-              <Button variant="outline">Learn More</Button>
+              <Button asChild variant="default">
+                <Link href="#">Get Started</Link>
+              </Button>
+              <Button variant="outline">
+                <Link href="#">Learn More</Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Key Features */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-zinc-700 grid justify-center">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">
+      <section
+        className={cn(
+          "w-full py-12 md:py-24 lg:py-32 grid justify-center",
+          "bg-background-950 dark:bg-background-200"
+        )}
+      >
+        <div className="container group p-8 md:p-12 rounded-md flex flex-col">
+          <h2
+            className={cn(
+              "text-3xl font-bold tracking-tighter sm:text-5xl mb-8 text-center z-10"
+            )}
+          >
             Key Features
           </h2>
           <div
             className={cn(
               "grid gap-10 sm:grid-cols-2 md:grid-cols-3",
               "sm:*:[&:last-child]:col-span-full md:*:[&:last-child]:col-span-1",
-              "*:shadow-neo"
+              "*:shadow-[20px_20px_60px_#bebebe,_-20px_-20px_60px_#ffffff] dark:*:shadow-[20px_20px_60px_#1f1f1f,_-20px_-20px_60px_#292929] *:border-0"
             )}
           >
             <Card>
               <CardContent className="flex flex-col items-center space-y-2 p-6">
                 <LayoutIcon className="h-12 w-12 mb-2" />
-                <h3 className="text-xl font-bold">Intuitive Design</h3>
+                <h3 className="text-xl font-bold">
+                  <span
+                    className={cn(
+                      "relative",
+                      "before:absolute before:hidden before:bottom-0 before:h-2 before:w-full before:items-end before:translate-y-1",
+                      "before:bg-gradient-to-b before:from-sky-400/50",
+                      "before:motion-reduce::transition-none before:transition before:duration-500 ease-in group-hover:before:block group-hover:before:animate-in"
+                    )}
+                  >
+                    Intuitive Design
+                  </span>
+                </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
                   Our user-friendly interface ensures a smooth experience for
                   all users.
                 </p>
               </CardContent>
             </Card>
+
             <Card>
               <CardContent className="flex flex-col items-center space-y-2 p-6">
                 <LockIcon className="h-12 w-12 mb-2" />
-                <h3 className="text-xl font-bold">Privacy</h3>
+                <h3 className="text-xl font-bold">
+                  <span
+                    className={cn(
+                      "relative",
+                      "before:absolute before:hidden before:bottom-0 before:h-2 before:w-full before:items-end before:translate-y-1",
+                      "before:bg-gradient-to-b before:from-sky-400/50",
+                      "before:motion-reduce::transition-none before:transition before:duration-500 ease-in group-hover:before:block group-hover:before:animate-in"
+                    )}
+                  >
+                    Privacy
+                  </span>
+                </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
                   We do not store any kind of information about the user, nor do
                   we collect telemetry.
                 </p>
               </CardContent>
             </Card>
+
             <Card>
               <CardContent className="flex flex-col items-center space-y-2 p-6">
                 <BarChartIcon className="h-12 w-12 mb-2" />
                 <h3 className="text-xl font-bold text-center">
-                  Always
-                  <br />
-                  up-to-date
+                  <span
+                    className={cn(
+                      "relative break-keep",
+                      "before:absolute before:hidden before:bottom-0 before:right-0 before:h-2 before:w-full before:items-end before:translate-y-1",
+                      "before:bg-gradient-to-b before:from-sky-400/50",
+                      "before:motion-reduce::transition-none before:transition before:duration-500 ease-in group-hover:before:block group-hover:before:animate-in"
+                    )}
+                  >
+                    Always up-to-date
+                  </span>
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
                   Always have the latest courses so you can plan accordingly.
@@ -116,7 +161,12 @@ export default function LandingPage() {
       </section>
 
       {/* Get started now */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-zinc-800 grid justify-center">
+      <section
+        className={cn(
+          "w-full py-12 md:py-24 lg:py-32 grid justify-center",
+          "bg-background-950 dark:bg-background-200"
+        )}
+      >
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
@@ -211,14 +261,14 @@ function PlaceholderIcon(
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
 ) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1200"
-      height="1200"
-      fill="none"
-      {...props}
-    >
-      <rect width="1200" height="1200" fill="#EAEAEA" rx="3" />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" {...props}>
+      <rect
+        width="200"
+        height="200"
+        style={{ translate: "-50% -50%" }}
+        fill="#EAEAEA"
+        rx="3"
+      />
       <g opacity=".5">
         <g opacity=".5">
           <path

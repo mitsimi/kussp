@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
 import MenuIcon from "./icons/MenuIcon";
 import {
   Disclosure,
@@ -14,41 +13,22 @@ import CancelIcon from "./icons/CancelIcon";
 export default function Navbar() {
   const links = [
     { href: "#", label: "Home" },
-    { href: "#", label: "Planner" },
-    { href: "#", label: "About" },
+    { href: "/planner", label: "Planner" },
+    { href: "/about", label: "About" },
   ];
-
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const fadeHeight = 100; // Height of the fade effect
-  const fadeStart = 10; // Start fading at this scroll position
-  const fadeEnd = fadeStart + fadeHeight;
-
-  const opacity = Math.max(
-    0,
-    Math.min(1, (scrollY - fadeStart) / (fadeEnd - fadeStart))
-  );
 
   return (
     <nav>
       <Disclosure as="div" className="z-50 fixed top-0 right-0 left-0">
         <div
           className={cn(
-            "py-4 px-8",
-            "md:mx-14 md:my-4",
-            "xl:max-w-screen-md xl:mx-auto",
-            "bg-neutral-50 dark:bg-neutral-800/80",
-            "border-y border-slate-900/10 md:border-0 md:rounded-[14px]",
-            "md:shadow-neo"
+            "py-4",
+            "bg-neutral-50 dark:bg-neutral-800",
+            "border-b border-background-200",
+            "md:shadow-xl shadow-black"
           )}
         >
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-around">
             {/* Branding */}
             <div className="flex items-center space-x-2">
               <svg
@@ -142,23 +122,6 @@ export default function Navbar() {
           </div>
         </DisclosurePanel>
       </Disclosure>
-      {/* Fade content */}
-      <div>
-        <div
-          className="dark:hidden pointer-events-none fixed top-0 left-0 right-0 z-40 h-40"
-          aria-hidden
-          style={{
-            background: `linear-gradient(to bottom, rgba(255,255,255,${opacity}) 0%, rgba(255,255,255,${opacity}) 50%, rgba(255,255,255,0) 100%)`,
-          }}
-        />
-        <div
-          className="hidden dark:block pointer-events-none fixed top-0 left-0 right-0 z-40 h-40"
-          aria-hidden
-          style={{
-            background: `linear-gradient(to bottom, rgba(39, 39, 42, ${opacity}) 0%, rgba(39, 39, 42, ${opacity}) 50%, rgba(39, 39, 42, 0) 100%)`,
-          }}
-        />
-      </div>
     </nav>
   );
 }
