@@ -12,7 +12,7 @@ import CancelIcon from "./icons/CancelIcon";
 
 export default function Navbar() {
   const links = [
-    { href: "#", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "/planner", label: "Planner" },
     { href: "/about", label: "About" },
   ];
